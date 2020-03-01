@@ -110,5 +110,52 @@ footer {
 
 @media screen and (max-width: 600px) {
   
+
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+        flex: none;
+    }
+    ul {
+        flex-direction: column;
+    }
+    .site-title {
+        flex: none;
+        height: 3rem;
+    }
+    .post {
+        flex-direction: column;
+        flex: none;
+    }
+    .post-content {
+        width: 100%;
+    }
+    .post-title {
+        flex: none;
+        height: 2rem;
+    }
+    .main-content {
+        flex-direction: column;
+        flex: none;
+    }
+    .divider {
+        flex: none;
+        height: 50vh;
+    }
+    .aside-left {
+        width: 100%;
+        order: 2;
+        height: 10vh;
+    }
+    .aside-right {
+        width: 100%;
+        height: 50vh;
+    }
+    .footer {
+        flex: none;
+    }
 }
   
