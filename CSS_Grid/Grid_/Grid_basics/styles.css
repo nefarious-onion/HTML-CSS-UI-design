@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Caladea', ;
+    background: greenyellow;
+}
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px; */
+    /* fraction is responsive!! */
+    /* grid-template-columns: 1fr 1fr 1fr;   */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: 100px 100px 100px;
+    /* dont use margin, use grid-gap!!! */
+    grid-gap: 1rem;
+    margin: 0 auto;
+    background: hotpink;
+    border-radius: 5px;
+}
+
+.item {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.item:first-child {
+    background: yellow;
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+}
+.item:last-child {
+    background: green;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    grid-column: 1 / span 5;
+}
