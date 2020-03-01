@@ -1,2 +1,2 @@
 # HTML-CSS-UI-design
- School Tasks and Exercises (Business College Helsinki - Full Stack Web Development)
+ School Tasks and Exercises (Business College Helsinki 2020 - Full Stack Web Development)
