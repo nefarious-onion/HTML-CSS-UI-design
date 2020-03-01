@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Finlandica';
+    src: url(./assets/fonts/finlandica-regularWeb.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web";
+  background: lightgrey;
+}
+/* --------header--------- */
+.logo-bar {
+  background: #fff;
+  height: 10vh;
+}
+.logo, .header-link {
+    display: inline-block;
+}
+.nav-bar {
+  background: darkblue;
+  color: #fff;
+}
+.nav-item,
+.nav-item a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+.search-bar {
+    display: inline-block;
+}
+
+/* --------main----------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  padding: 40px;
+  background: white;
+}
+.grid-item {
+  background: hotpink;
+}
+.grid-text {
+  grid-column: 1 / span 4;
+}
+
+footer {
+  color: white;
+  width: 100%;
+}
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 400px;
+  width: 80%;
+  background: darkblue;
+  margin: 0 auto;
+  padding: 40px;
+  padding-bottom: 60px;
+}
+.footer-item-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+.footer-item-2 {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+}
+.footer-item-3 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+}
