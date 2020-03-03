@@ -2,6 +2,11 @@
     font-family: 'Finlandica';
     src: url(./assets/fonts/finlandica-regularWeb.woff);
 }
+
+:root {
+  --main-color: rgb(0, 46, 162);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,20 +14,21 @@
 }
 
 body {
-  font-family: "Titillium Web";
+  font-family: 'Finlandica';
   background: lightgrey;
 }
 /* --------header--------- */
 .logo-bar {
   background: #fff;
-  height: 10vh;
+  height: 110px;
 }
 .logo, .header-link {
     display: inline-block;
 }
 .nav-bar {
-  background: darkblue;
+  background: var(--main-color);
   color: #fff;
+  height: 50px;
 }
 .nav-item,
 .nav-item a {
@@ -36,7 +42,54 @@ body {
 }
 
 /* --------main----------- */
-
+/* hero banner */
+.hero-banner {
+  height: 500px;
+  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-banner::after {
+  content: '';
+  background: var(--main-color);
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hero-banner > * {
+  z-index: 100;
+  position: relative;
+}
+.hero-header {
+  color: #fff;
+  width: 50%;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 130px 0;
+}
+.hero-header h1 {
+  font-size: 100px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.hero-header h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+.hero-header h1::after {
+  color: #fff;
+  opacity: 1;
+}
+/* grid styles */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -48,13 +101,23 @@ body {
   padding: 40px;
   background: white;
 }
-.grid-item {
-  background: hotpink;
-}
-.grid-text {
+.grid-header {
   grid-column: 1 / span 4;
 }
-
+.grid-item {
+  background: hotpink;
+  min-height: 15vh;
+  min-width: 100%;
+  display: grid;
+  
+  padding: 20px;
+}
+.grid-text {
+  font-size: 26px;
+  text-transform: uppercase;
+  justify-self: start;
+  align-self: end;
+}
 footer {
   color: white;
   width: 100%;
