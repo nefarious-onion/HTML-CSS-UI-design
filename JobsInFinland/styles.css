@@ -5,6 +5,7 @@
 
 :root {
   --main-color: rgb(0, 46, 162);
+  --secondary-color: #fff;
 }
 
 * {
@@ -19,32 +20,90 @@ body {
 }
 /* --------header--------- */
 .logo-bar {
-  background: #fff;
+  background: var(--secondary-color);
   height: 110px;
+  position: relative;
 }
-.logo, .header-link {
+.logo a, .header-link a{
+    text-decoration: none;
     display: inline-block;
+    color: var(--main-color);
+}
+.logo a {
+  height: 100%;
+  font-size: 34px;
+  letter-spacing: -2px;
+  width: 130px;
+  line-height: 1.05;
+  padding-top: 21px;
+  position: absolute;
+  left: 50px;
+  font-style: normal;
+}
+strong {
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+.header-link {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 14px;
 }
 .nav-bar {
   background: var(--main-color);
-  color: #fff;
+  color: var(--secondary-color);
+  font-weight: 400;
   height: 50px;
+  padding-left: 40px;
+  position: relative;
+}
+.nav {
+  display: block;
 }
 .nav-item,
 .nav-item a {
   list-style-type: none;
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-color);
   display: inline-block;
+}
+
+.nav-item a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 13px;
+  
+}
+.nav-item:first-child a {
+  border-bottom: solid 3px var(--secondary-color);
+}
+.nav-item a:hover {
+  border-bottom: solid 3px var(--secondary-color);
 }
 .search-bar {
     display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    right: 50px;
 }
+/* dropdown menu */
+.drop-down {
+  background: var(--secondary-color);
+  visibility: hidden;
+  min-width: 5rem;
+  position: absolute;
+  left: 0;
+  display: none;
+  margin-top: 1rem;
+}
+/* .dp-item {
 
+} */
 /* --------main----------- */
 /* hero banner */
 .hero-banner {
-  height: 500px;
   background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
   background-position: 50% 30%;
   background-repeat: no-repeat;
@@ -97,7 +156,7 @@ body {
   grid-gap: 2rem;
   margin: 0 auto;
   width: 80%;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 40px;
   background: white;
 }
