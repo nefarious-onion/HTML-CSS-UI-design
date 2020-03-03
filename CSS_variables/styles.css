@@ -1,0 +1,68 @@
+
+:root {
+    --main-font: 'Oxanium', cursive;
+    --mp: 2rem;
+    --primary-color: hotpink;
+    --secondary-color: pink;
+    --text-color: gold;
+    --bg-color: floralwhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    margin: var(--mp);
+    background: var(--bg-color);
+}
+h1 {
+    text-align: center;
+    margin-bottom: var(--mp);
+    text-shadow: 2px 2px 5px var(--primary-color);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.grid-container div {
+    height: 200px;
+    width: 200px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    /* make grid inside the box and center everything: */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    transition: background 1s ease-out, height 0.5s ease-in;
+    /* You can have as many shadows on one element as you like */
+    text-shadow: 6px -6px 10px white, 4px -4px 3px yellow, 2px -2px 2px gold, 1px -1px 1px gold;
+    box-shadow: 10px -10px 50px red inset,-10px 10px 50px red inset, 0 0 5px #333;
+}
+.grid-container div:hover{
+    background: var(--secondary-color);
+    height: 250px;
+    /* using box-shadow to change the color of a box is a good hack */
+    /* box-shadow: inset 0 0 500px #333; */
+}
+.circle {
+    margin: 2rem auto;
+    background: var(--primary-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    box-shadow: 0 0 5px red, -2px 2px 3px pink inset, 2px -2px 3px pink inset;
+}
