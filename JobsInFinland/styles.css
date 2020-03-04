@@ -58,49 +58,75 @@ strong {
   padding-left: 40px;
   position: relative;
 }
-.nav {
+nav {
   display: block;
 }
-.nav-item,
-.nav-item a {
+ul {
   list-style-type: none;
+}
+ul li,
+ul li a {
   text-decoration: none;
   color: var(--secondary-color);
   display: inline-block;
 }
 
-.nav-item a {
+ul li {
   height: 50px;
   line-height: 50px;
   padding: 0 13px;
-  
+  position: relative;
 }
-.nav-item:first-child a {
+ul li:first-of-type {
   border-bottom: solid 3px var(--secondary-color);
 }
-.nav-item a:hover {
+ul li:hover {
   border-bottom: solid 3px var(--secondary-color);
 }
-.search-bar {
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
-    right: 50px;
-}
+
 /* dropdown menu */
-.drop-down {
+ul li ul {
   background: var(--secondary-color);
+  display: block;
   visibility: hidden;
+  opacity: 0;
   min-width: 5rem;
+  width: 208px;
   position: absolute;
   left: 0;
   display: none;
-  margin-top: 1rem;
+  z-index: 999;
 }
-/* .dp-item {
-
-} */
+ul li ul li {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+ul li ul li a{
+  display: block;
+  min-width: 208px;
+  text-align: left;
+  min-height: 23px;
+  line-height: 23px;
+  padding: 8px 15px;
+  font-weight: 400;
+}
+ul li ul li a{
+  color: var(--main-color);
+}
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+}
+/* ------ */
+.search-bar {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 50px;
+}
 /* --------main----------- */
 /* hero banner */
 .hero-banner {
@@ -113,7 +139,7 @@ strong {
 .hero-banner::after {
   content: '';
   background: var(--main-color);
-  opacity: 0.3;
+  opacity: 0.4;
   height: 100%;
   width: 100%;
   position: absolute;
