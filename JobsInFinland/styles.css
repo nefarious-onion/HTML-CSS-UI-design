@@ -77,7 +77,7 @@ ul li {
   padding: 0 13px;
   position: relative;
 }
-ul li:first-of-type {
+.active {
   border-bottom: solid 3px var(--secondary-color);
 }
 ul li:hover {
@@ -100,15 +100,16 @@ ul li ul {
 ul li ul li {
   padding: 0;
   margin: 0;
-  border: none;
+  border-style: none;
 }
-ul li ul li a{
+ul li ul li a {
   display: block;
+  width: 100%;
   min-width: 208px;
   text-align: left;
-  min-height: 23px;
-  line-height: 23px;
-  padding: 8px 15px;
+  /* min-height: 23px; */
+  height: 100%;
+  padding: 0;
   font-weight: 400;
 }
 ul li ul li a{
