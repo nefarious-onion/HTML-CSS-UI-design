@@ -50,6 +50,20 @@ strong {
   right: 50px;
   font-size: 14px;
 }
+.header-link a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: inline-block;
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 999;
+}
 .nav-bar {
   background: var(--main-color);
   color: var(--secondary-color);
@@ -70,7 +84,6 @@ ul li a {
   text-decoration: none;
   color: var(--secondary-color);
   display: inline-block;
-  
 }
 
 ul li {
@@ -78,7 +91,6 @@ ul li {
   line-height: 50px;
   padding: 0 13px;
   position: relative;
-  
 }
 .active {
   border-bottom: solid 3px var(--secondary-color);
@@ -88,59 +100,42 @@ ul li:hover {
   transition: border-bottom 0.2s ease-in-out;
 }
 
-/* dropdown menu */
+/* -----------dropdown menu ---------*/
 ul li ul {
   background: var(--secondary-color);
-  display: block;
   visibility: hidden;
   opacity: 0;
-  min-width: 5rem;
   width: 208px;
   position: absolute;
   left: 0;
   display: none;
   z-index: 999;
+  margin: 0;
 }
-
 ul li ul li {
-  padding: 0;
+  width: 100%;
+  height: 39px;
+  clear: both;
+  padding: 8px 0 8px 15px;
   margin: 0;
   border-style: none;
   transition: background 0.2s ease-in-out;
+}
+ul li ul li a {
+  height: 100%;
+  text-align: left;
+  padding: 0;
+  font-weight: 400;
+  color: var(--main-color);
 }
 ul li ul li:hover {
   background: rgb(247, 247, 255);
   border: none;
 }
-ul li ul li a {
-  display: block;
-  width: 100%;
-  min-width: 208px;
-  text-align: left;
-  height: 100%;
-  padding: 0;
-  font-weight: 400;
-  transition: background 1s ease-in-out;
-}
-ul li ul li a{
-  color: var(--main-color);
- 
-
-  
-}
 ul li:hover > ul, ul li ul:hover {
   visibility: visible;
   display: block;
   opacity: 1;
-  
-}
-/* ------ */
-.search-bar {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  position: absolute;
-  right: 50px;
 }
 /* --------main----------- */
 /* hero banner */
