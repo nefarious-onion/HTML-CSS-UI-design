@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Finlandica';
+    src: url(./assets/fonts/finlandica-regularWeb.woff);
+}
+
+:root {
+  --main-color: rgb(0, 46, 162);
+  --secondary-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Finlandica';
+  background: lightgrey;
+}
+/* --------header--------- */
+.logo-bar {
+  background: var(--secondary-color);
+  height: 110px;
+  position: relative;
+}
+.logo a, .header-link a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--main-color);
+}
+.logo a {
+  height: 100%;
+  font-size: 34px;
+  letter-spacing: -2px;
+  width: 130px;
+  line-height: 1.05;
+  padding-top: 21px;
+  position: absolute;
+  left: 50px;
+  font-style: normal;
+}
+strong {
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+.header-link {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 14px;
+}
+.nav-bar {
+  background: var(--main-color);
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-style: normal;
+  height: 50px;
+  padding-left: 40px;
+  position: relative;
+}
+nav {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+ul li,
+ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  display: inline-block;
+  
+}
+
+ul li {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 13px;
+  position: relative;
+  
+}
+.active {
+  border-bottom: solid 3px var(--secondary-color);
+}
+ul li:hover {
+  border-bottom: solid 3px var(--secondary-color);
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+/* dropdown menu */
+ul li ul {
+  background: var(--secondary-color);
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  width: 208px;
+  position: absolute;
+  left: 0;
+  display: none;
+  z-index: 999;
+}
+
+ul li ul li {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  transition: background 0.2s ease-in-out;
+}
+ul li ul li:hover {
+  background: rgb(247, 247, 255);
+  border: none;
+}
+ul li ul li a {
+  display: block;
+  width: 100%;
+  min-width: 208px;
+  text-align: left;
+  height: 100%;
+  padding: 0;
+  font-weight: 400;
+  transition: background 1s ease-in-out;
+}
+ul li ul li a{
+  color: var(--main-color);
+ 
+
+  
+}
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  
+}
+/* ------ */
+.search-bar {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 50px;
+}
+/* --------main----------- */
+/* hero banner */
+.hero-banner {
+  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-banner::after {
+  content: '';
+  background: var(--main-color);
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hero-banner > * {
+  z-index: 100;
+  position: relative;
+}
+.hero-header {
+  color: #fff;
+  width: 50%;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 130px 0;
+}
+.hero-header h1 {
+  font-size: 100px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.hero-header h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+.hero-header h1::after {
+  color: #fff;
+  opacity: 1;
+}
+/* grid styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
+  /* height: 100vh; */
+  padding: 40px;
+  background: white;
+}
+.grid-header {
+  grid-column: 1 / span 4;
+}
+.grid-item {
+  background: hotpink;
+  min-height: 15vh;
+  min-width: 100%;
+  display: grid;
+  
+  padding: 20px;
+}
+.grid-text {
+  font-size: 26px;
+  text-transform: uppercase;
+  justify-self: start;
+  align-self: end;
+}
+footer {
+  color: white;
+  width: 100%;
+}
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 400px;
+  width: 80%;
+  background: darkblue;
+  margin: 0 auto;
+  padding: 40px;
+  padding-bottom: 60px;
+}
+.footer-item-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+.footer-item-2 {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+}
+.footer-item-3 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+}
