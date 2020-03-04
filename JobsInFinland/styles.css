@@ -54,6 +54,7 @@ strong {
   background: var(--main-color);
   color: var(--secondary-color);
   font-weight: 400;
+  font-style: normal;
   height: 50px;
   padding-left: 40px;
   position: relative;
@@ -69,6 +70,7 @@ ul li a {
   text-decoration: none;
   color: var(--secondary-color);
   display: inline-block;
+  
 }
 
 ul li {
@@ -76,12 +78,14 @@ ul li {
   line-height: 50px;
   padding: 0 13px;
   position: relative;
+  
 }
 .active {
   border-bottom: solid 3px var(--secondary-color);
 }
 ul li:hover {
   border-bottom: solid 3px var(--secondary-color);
+  transition: border-bottom 0.2s ease-in-out;
 }
 
 /* dropdown menu */
@@ -97,28 +101,38 @@ ul li ul {
   display: none;
   z-index: 999;
 }
+
 ul li ul li {
   padding: 0;
   margin: 0;
   border-style: none;
+  transition: background 0.2s ease-in-out;
+}
+ul li ul li:hover {
+  background: rgb(247, 247, 255);
+  border: none;
 }
 ul li ul li a {
   display: block;
   width: 100%;
   min-width: 208px;
   text-align: left;
-  /* min-height: 23px; */
   height: 100%;
   padding: 0;
   font-weight: 400;
+  transition: background 1s ease-in-out;
 }
 ul li ul li a{
   color: var(--main-color);
+ 
+
+  
 }
 ul li:hover > ul, ul li ul:hover {
   visibility: visible;
   display: block;
   opacity: 1;
+  
 }
 /* ------ */
 .search-bar {
