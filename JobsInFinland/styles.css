@@ -184,7 +184,7 @@ ul li:hover > ul, ul li ul:hover {
   color: #fff;
   opacity: 1;
 }
-/* grid styles */
+/* -------------grid styles------------ */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -192,12 +192,20 @@ ul li:hover > ul, ul li ul:hover {
   grid-gap: 2rem;
   margin: 0 auto;
   width: 80%;
-  /* height: 100vh; */
-  padding: 40px;
+  padding-top: 40px;
   background: white;
 }
 .grid-header {
   grid-column: 1 / span 4;
+}
+.grid-header h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: var(--main-color);
+}
+.grid-header p {
+  font-size: 24px;
 }
 .grid-item {
   background: hotpink;
@@ -213,6 +221,17 @@ ul li:hover > ul, ul li ul:hover {
   justify-self: start;
   align-self: end;
 }
+
+/* -----------grid-images-------- */
+.section-b .grid-item {
+  background: url(https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80) no-repeat center center/cover ;
+}
+.section-b .grid-item:first {
+  background: url() no-repeat center center/cover ;
+}
+
+
+/* --------footer styles-------- */
 footer {
   color: white;
   width: 100%;
