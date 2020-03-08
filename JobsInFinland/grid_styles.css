@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Finlandica';
+    src: url(./assets/fonts/finlandica-regularWeb.woff);
+}
+
+:root {
+  --main-color: rgb(0, 46, 162);
+  --secondary-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Finlandica';
+}
+/* -----main-layout----- */
+.main-grid {
+    display: grid;
+    grid-template-areas: 
+    ""
+    ;
+}
