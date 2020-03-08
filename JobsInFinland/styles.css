@@ -54,88 +54,84 @@ strong {
   text-decoration: underline;
 }
 
-.search-bar {
-  display: inline-block;
+.search {
+  display: block;
   font-size: 12px;
-  height: 50px;
-  line-height: 50px;
-  position: absolute;
+  color: var(--secondary-color);
+  /* line-height: 50px; */
+  /* position: absolute;
   top: 0;
   right: 50px;
-  z-index: 999;
+  z-index: 999; */
 }
 .nav-bar {
   background: var(--main-color);
   color: var(--secondary-color);
   font-weight: 400;
   font-style: normal;
-  height: 50px;
   padding-left: 40px;
   position: relative;
 }
 nav {
   display: block;
 }
-ul {
+.nav-menu {
   list-style-type: none;
 }
-ul li,
-ul li a {
-  text-decoration: none;
-  color: var(--secondary-color);
+.nav-menu__item {
+  position: relative;
   display: inline-block;
 }
-
-ul li {
-  height: 50px;
-  line-height: 50px;
-  padding: 0 13px;
-  position: relative;
-}
-.active {
+.nav-menu__item--active {
   border-bottom: solid 3px var(--secondary-color);
 }
-ul li:hover {
+.nav-menu__item:hover {
   border-bottom: solid 3px var(--secondary-color);
   transition: border-bottom 0.2s ease-in-out;
 }
-
+.nav-menu__link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  /* a takes the whole space inside li using display: block */
+  display: block;
+  text-transform: uppercase;
+  line-height: 1em;
+  /* horizontal padding 13px/16 (em value)
+  vertical padding (50-16)/2/16 -> target height 50px -> minus fontsize, divided by 2 for top and bottom, divided by 16 for em value*/
+  padding: 1.0625em 0.8125em;
+}
 /* -----------dropdown menu ---------*/
-ul li ul {
+.dropdown-menu {
   background: var(--secondary-color);
   visibility: hidden;
   opacity: 0;
   width: 208px;
   position: absolute;
   left: 0;
-  display: none;
+  list-style-type: none;
+  /* display: none; -> transitions won't work with display none */
   z-index: 999;
   margin: 0;
+  /* when hover ends, these properties are in effect: */
+  transition: visibility 0s 1s linear, opacity 1s 0s ease-in-out;
 }
-ul li ul li {
-  width: 100%;
-  height: 39px;
-  clear: both;
-  padding: 8px 0 8px 15px;
-  margin: 0;
-  border-style: none;
-  transition: background 0.2s ease-in-out;
-}
-ul li ul li a {
-  height: 100%;
-  text-align: left;
+.dropdown-menu__link {
+  display: block;
   padding: 0;
-  font-weight: 400;
   color: var(--main-color);
+  text-decoration: none;
 }
-ul li ul li:hover {
+.dropdown-menu__item:hover {
   background: rgb(247, 247, 255);
   border: none;
 }
-ul li:hover > ul, ul li ul:hover {
+.nav-menu__item:hover > .dropdown-menu,
+.dropdown-menu:hover {
   visibility: visible;
-  display: block;
+  /* display: block;  -> don't need since display:none is not used*/
   opacity: 1;
+  /* this transition starts when hover starts */
+  transition: opacity 1s ease-in-out;
 }
 /* --------main----------- */
 /* hero banner */
@@ -146,7 +142,7 @@ ul li:hover > ul, ul li ul:hover {
   background-size: cover;
   position: relative;
 }
-.hero-banner::after {
+.hero-banner::before {
   content: '';
   background: var(--main-color);
   opacity: 0.4;
@@ -155,10 +151,8 @@ ul li:hover > ul, ul li ul:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 .hero-banner > * {
-  z-index: 100;
   position: relative;
 }
 .hero-header {
