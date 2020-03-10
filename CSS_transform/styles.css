@@ -1,0 +1,107 @@
+:root {
+    --background-color: lightgreen;
+    --primary-color:hotpink;
+    --secondary-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.box {
+    background: var(--primary-color);
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: transform 1s 2s;
+    /* transform: rotate(125deg); */
+    /* transform: skewX(50deg);
+    transform: skewY(50deg); */
+    /* transform: skew(30deg) */
+    /* transform: scale(-3, 2); */
+    /* transform: translateY(200px) translateX(200px); */
+    /* transform: translate(300px, 40px); */
+}
+
+.circle {
+    background: var(--primary-color);
+    height: 200px;
+    width: 200px;
+    margin: 50px 0;
+    border-radius: 50%;
+    transition: background 1s, transform 1s;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.circle:hover {
+    background: var(--secondary-color);
+    transform: scale(2);
+}
+.rectangle {
+    background: var(--primary-color);
+    height: 200px;
+    width: 200px;
+    transition: background 2s, transform 2s;
+}    
+.rectangle:hover {
+    transform: rotate(180deg);
+    background: var(--secondary-color);
+}
+
+.rectangle1 {
+    margin: 50px 0;
+    background: var(--primary-color);
+    height: 300px;
+    width: 300px;
+    transition: all 1s;
+    padding: 2rem;
+}
+
+.rectangle1:hover {
+    transform: scale(.5);
+}
+.rectangle1 p {
+    opacity: 0;
+    transition: all 1s;
+    font-size: 5rem;
+}
+.rectangle1 p:hover {
+    opacity: 1;
+}
+
+.menu-box {
+    margin: 50px 0;
+}
+.underline {
+    display: block;
+    font-size: 5rem;
+}
+.underline::after {
+    content: '';
+    height: 20px;
+    width: 0;
+    display: block;
+    background: var(--primary-color);
+    transition: all 1s ease-in;
+}
+.underline:hover::after {
+    width: 100%;
+}
+
+/* borders */
+/* make all borders start at the same timem but with different duration */
+/* left -1s bottom 2s right 3 top 4 */
