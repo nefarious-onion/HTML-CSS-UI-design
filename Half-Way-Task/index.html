@@ -18,22 +18,21 @@
   <body>
     <header>
       <div class="container">
-        <div class="header-content">
           <div class="logo"><h2>My Portfolio</h2></div>
-          <nav class="menu">
-            <ul>
-              <li>
-                <a href="#">Menu <i class="fas fa-angle-down"></i></a>
+          <nav>
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Menu <i class="fas fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__item"><a class="dropdown__link" href="">One</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="">Two</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="">Three</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="">Four</a></li>
+                </ul>
               </li>
-              <!-- <ul class="dropdown">
-                                <li><a href="#">Sub-1</a></li>
-                                <li><a href="#">Sub-2</a></li>
-                                <li><a href="#">Sub-3</a></li>
-                            </ul> -->
             </ul>
           </nav>
         </div>
-      </div>
     </header>
     <main>
       <section id="hero-banner">
@@ -99,11 +98,10 @@
               <div class="progress-bar"></div>
             </div>
             <div class="skill-box">
-              <div class="icon" id="js"><i class="fab fa-js-square"></i></div>
+              <div class="icon js"><i class="fab fa-js-square"></i></div>
                 <div class="box-header">
                     <h3>js</h3>
                 </div>
-              
               <div class="progress-bar"></div>
             </div>
             <div class="skill-box">

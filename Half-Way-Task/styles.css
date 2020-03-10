@@ -12,53 +12,57 @@ body {
 header {
   background: #1d1f21;
   color: #fff;
-}
-.container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.header-content {
+.container {
   display: flex;
-  flex-direction: row;
   width: 70%;
-  height: 40px;
   justify-content: space-between;
   align-items: center;
 }
-
-header ul a {
+.logo {
+  height: 100%;
+  padding: 1rem 0;
+}
+.menu {
+  list-style-type: none;
+}
+.menu__item {
+  position: relative;
+}
+.menu__link {
+  display: block;
   text-decoration: none;
   color: #fff;
+  padding: 1rem;
 }
-
-/* -------------dropdown menu-------------- */
-/* nav li {
-  display: block;
-  /* transition-duration: o.5s; */
-/* }
-
-nav ul li ul {
-  background: #000;
+.menu__link:hover {
+  color: hotpink;
+}
+.dropdown-menu {
+  list-style-type: none;
   visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute; */
-  /* transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0; */
-  /* display: none;
-} */ 
-/* nav ul li:hover > ul,
-ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-nav ul li ul li {
-  clear: both;
-  width: 100%; */
+  position: absolute;
+  left: 0;
+  background: #1d1f21;
+  width: 100px;
+} 
 
+.dropdown__link{
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1rem;
+}
+.dropdown__link:hover {
+  color: hotpink;
+}
+
+.menu__item:hover > .dropdown-menu, .dropdown-menu:hover {
+  visibility: visible;
+}
 /* --------------hero banner styles------------ */
 #hero-banner {
   max-width: 100%;
@@ -86,8 +90,6 @@ nav ul li ul li {
 }
 .hero-text {
   color: #fff;
-}
-.hero-text {
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -119,11 +121,9 @@ nav ul li ul li {
 /* --------------section-a---------- */
 .section-a {
   width: 100%;
-  height: 400px;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 .container-a {
   height: 100%;
@@ -152,11 +152,9 @@ nav ul li ul li {
 .section-b {
   background: #f2f2f2;
   width: 100%;
-  height: 400px;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-
+  padding: 30px 0;
 }
 .container-b {
   height: 100%;
@@ -168,10 +166,11 @@ nav ul li ul li {
 .skill-boxes {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .skill-box {
   height: 150px;
-  width: 250px;
+  width: 200px;
   background: #fff;
   text-align: center;
   padding-top: 10px;
@@ -182,7 +181,7 @@ nav ul li ul li {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
-#js {
+.js {
   background: lightskyblue;
   color: #fff;
   border-radius: 50%;
@@ -190,7 +189,10 @@ nav ul li ul li {
   height: 70px;
   padding: 10px;
   position: absolute;
-  left: 85px;
+  /* centering with position:absolute: */
+  left: 50%;
+  /* add negative left margin half the width of the element */
+  margin-left: -35px;
   top: -30px;
 }
 
