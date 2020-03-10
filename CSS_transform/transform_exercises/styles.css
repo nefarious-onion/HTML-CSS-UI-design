@@ -178,3 +178,51 @@ body {
         background: rgb(122, 54, 94);
     }
 }
+
+.border {
+    height: 200px;
+    width: 400px;
+    background: white;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+.border p {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* left side */
+.border::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 100%;
+    border-left: 5px solid var(--primary-color);
+    transition: all 1s;
+}
+.border:hover::before{
+    bottom: 0;
+}
+/* right side */
+.border::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 5px solid var(--primary-color);
+    transition: all 1s;
+}
+.border:hover::after{
+    top: 0;
+}
+/* top side */
+
+/* bottom side */
