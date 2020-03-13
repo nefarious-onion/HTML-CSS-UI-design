@@ -230,11 +230,36 @@ footer p {
 }
 .footer-content {
   padding-right: 40px;
+  flex: 1;
 }
 footer form {
   color: #fff;
+  flex: 1;
 }
 
-footer form input {
-  margin: 20px 0;
+label {
+  display: block;
+}
+input, label, textarea {
+  margin: .4rem 0;
+}
+input, textarea {
+  width: 100%;
+}
+input {
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+textarea {
+  height: 4rem;
+  font-size: 1rem;
+  padding: 8px 10px;
+}
+.btn {
+  background: #72c6ed;
+  border: none;
+  text-align: center;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
 }
