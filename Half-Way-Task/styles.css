@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Ubuntu", sans-serif;
 }
@@ -64,10 +66,8 @@ header {
   visibility: visible;
 }
 /* --------------hero banner styles------------ */
-#hero-banner {
-  max-width: 100%;
+.hero-banner {
   width: 100%;
-  height: 350px;
 }
 .hero-banner-bg {
   background: url(https://images.unsplash.com/photo-1570402715538-7350ad7e6639?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
@@ -75,7 +75,6 @@ header {
   background-position: center;
   width: 100%;
   height: 100%;
-  max-height: 800px;
   display: flex;
   justify-content: center;
 }
@@ -98,16 +97,15 @@ header {
 	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
 	background-color:#74ad5a;
 	border-radius:3px;
-	border:1px solid #3b6e22;
-	display:inline-block;
-	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family:"Ubuntu", sans-serif;
 	font-size:20px;
 	font-weight:bold;
 	padding:20px 40px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #92b879;
+  text-shadow:0px 1px 0px #92b879;
+  display: inline-block;
+  margin-bottom: 40px;
 }
 .hero-button:hover {
 	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
@@ -214,6 +212,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .footer-container {
   width: 70%;
@@ -232,16 +231,17 @@ footer p {
   padding-right: 40px;
   flex: 1;
 }
+/* form */
 footer form {
   color: #fff;
   flex: 1;
 }
-
 label {
   display: block;
 }
 input, label, textarea {
   margin: .4rem 0;
+  font-family: "Ubuntu", sans-serif;
 }
 input, textarea {
   width: 100%;
@@ -262,4 +262,14 @@ textarea {
   padding: 12px 25px;
   font-size: 1rem;
   font-family: "Ubuntu", sans-serif;
+}
+.b-t-top {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #fff;
+  text-decoration: none;
+  color: #000;
+  padding: 12px 15px;
 }
