@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+header {
+    background: rgb(37, 37, 37);
+    color: #fff;
+}
+.logo {
+    display: inline-block;
+    padding: 30px 30px;
+}
+.logo h1 {
+    display: inline;
+    color: rgb(238, 145, 84);
+}
+nav {
+    display: inline-block;
+    position: relative;
+    left: 45rem;
+}
+
+.nav-menu {
+    list-style-type: none;
+}
+.nav__item {
+    display: inline-block;
+}
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 2.5312em 1em;
+}
+
+.section-a {
+    background: url(https://images.unsplash.com/photo-1479127820278-07bc8118cf6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
+    padding: 50px 0;
+    min-height: 500px;
+    background-attachment: fixed;
+}
+.section-b {
+    background: #e06e22;
+    padding: 50px 0;
+}
+.section-c {
+    background: url(https://images.unsplash.com/photo-1473147319958-21c51372f690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80) no-repeat center center/cover;
+    padding: 50px 0;
+    min-height: 500px;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 3rem;
+    background: rgba(238, 145, 84, 0.7);
+    border-radius: 5px;
+}
+.container span {
+    line-height: 1.5rem;
+}
+.container h2 {
+    margin-bottom: 30px;
+}
+.img-past {
+    background: url(https://images.unsplash.com/photo-1552598715-7eeb9232a2ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
+}
+.img-present {
+    background: url(https://images.unsplash.com/photo-1549533997-ee605cc2e87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
+}
+.img-future {
+    background: url(https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
+}
+.img {
+    height: 150px;
+    width: 250px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left;
+}
+footer {
+    background: rgb(37, 37, 37);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
