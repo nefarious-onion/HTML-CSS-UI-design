@@ -4,14 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Travel</title>
+    <script src="https://kit.fontawesome.com/242a4dda2d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="logo">
+            <h2> <span><i class="fas fa-broom"></i></span><br>
+            Global <span>Travel</span></h2>
+            <!-- <h3>for Independent <span>Women</span> </h3> -->
+            
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section class="hero-banner"></section>
-        <section></section>
+        <section class="hero-banner">
+            <div class="container">
+                <div class="hero__card">
+                    <h1>Welcome to our Homepage!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quae dolore dignissimos omnis consectetur...</p>
+                    <a class="hero__btn" href="#">Read more!</a>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="container">
+                <div class="section__text">
+                    <h2>About us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis quia ipsa? Repudiandae aliquid quis cum numquam deserunt temporibus ad facilis rem. Dolores, repellat? Totam voluptatum obcaecati explicabo fugit itaque? Odit voluptates repellat molestias iusto esse dignissimos dolor suscipit quas facilis fugit corporis at sed, quae omnis hic cum vitae!</p>
+                </div>
+                <div class="section__img"></div>
+            </div>       
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <form class="contact-form">
+                <h2>Contact us</h2>
+                <div class="form__row--text">
+                    <label class="form__label--text" for="firstName">First name</label>
+                    <input class="form__input--text" type="text" name="firstName" id="firstName">
+                </div>
+                <div class="form__row--text">
+                    <label class="form__label--text" for="lastName">Last name</label>
+                    <input class="form__input--text" type="text" name="lastName" id="lastName">
+                </div>
+                <div class="form__row--text">
+                    <label class="form__label--text" for="email">Email</label>
+                    <input class="form__input--text" type="email" name="email" id="email">
+                </div>
+                <div class="form__row--radio">
+                    <p>Do you want to join our newsletter?</p>
+                    <div class="radio__row">
+                        <input class="form__input--radio" type="radio" name="yes" id="yes">
+                        <label class="form__label--radio" for="yes">Yes</label>
+                    </div>
+                    <div class="radio__row">
+                        <input class="form__input--radio" type="radio" name="no" id="no">
+                        <label class="form__label--radio" for="no">No</label>
+                    </div>
+                   
+                  
+                </div>
+          
+               
+                
+            </form>
+            <div class="footer__text">
+                <h2>Lorem ipsum dolor sit.</h2>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
