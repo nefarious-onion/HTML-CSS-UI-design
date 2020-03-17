@@ -41,6 +41,16 @@ header {
     padding: 1em;
 }
 /* main */
+.container {
+    display: flex;
+    width: 75%;  
+}
+.pd-right {
+    padding-right: 25px;
+}
+.pd-left {
+    padding-left: 25px;
+}
 .hero-banner {
     background: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
     padding: 10rem;
@@ -71,11 +81,10 @@ section {
     display: flex;
     justify-content: center;
 }
-.container {
-    display: flex;
-    width: 75%;
-    
+.about-us {
+    padding: 50px 0;
 }
+
 .section__text {
     flex: 1;
 }
@@ -89,10 +98,13 @@ footer {
     color: var(--bg-color);
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
 }
-.contact-form {
+.footer__contact-form {
     flex: 1;
-    padding-right: 90px;
+}
+.footer__contact-form h2 {
+    margin-bottom: 1rem;
 }
 .footer__text {
     flex: 1;
@@ -113,7 +125,7 @@ footer {
 .radio__row {
     display: flex;
     justify-content: flex-start;
-    padding-top: 0.7rem;
+    margin-top: 0.7rem;
 }
 
 .form__input--text {
@@ -125,12 +137,21 @@ footer {
 .form__label--text {
     line-height: 1.5rem;
 }
-/* label {
-    line-height: 1.5rem;
-} */
 .form__input--radio {
     margin: 0 0.7rem;
 }
-.form__label--radio {
-
+.form__row--checkbox {
+    padding: 1rem 0;
+}
+.checkbox__row {
+    margin-top: 0.7rem;
+    padding-right: 10px;
+}
+.form__label--checkbox {
+    padding-left: 0.7rem;
+}
+.form__textarea{
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
 }

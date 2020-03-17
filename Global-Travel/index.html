@@ -35,18 +35,18 @@
             
         </section>
         <section>
-            <div class="container">
-                <div class="section__text">
+            <div class="container about-us">
+                <div class="section__text pd-right">
                     <h2>About us</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis quia ipsa? Repudiandae aliquid quis cum numquam deserunt temporibus ad facilis rem. Dolores, repellat? Totam voluptatum obcaecati explicabo fugit itaque? Odit voluptates repellat molestias iusto esse dignissimos dolor suscipit quas facilis fugit corporis at sed, quae omnis hic cum vitae!</p>
                 </div>
-                <div class="section__img"></div>
+                <div class="section__img pd-left"></div>
             </div>       
         </section>
     </main>
     <footer>
         <div class="container">
-            <form class="contact-form">
+            <form class="footer__contact-form pd-right">
                 <h2>Contact us</h2>
                 <div class="form__row--text">
                     <label class="form__label--text" for="firstName">First name</label>
@@ -61,23 +61,41 @@
                     <input class="form__input--text" type="email" name="email" id="email">
                 </div>
                 <div class="form__row--radio">
-                    <p>Do you want to join our newsletter?</p>
+                    <p>Do you want to join with our newsletter?</p>
                     <div class="radio__row">
-                        <input class="form__input--radio" type="radio" name="yes" id="yes">
+                        <input class="form__input--radio" type="radio" name="newsletter" value="yes" checked>
                         <label class="form__label--radio" for="yes">Yes</label>
                     </div>
                     <div class="radio__row">
-                        <input class="form__input--radio" type="radio" name="no" id="no">
+                        <input class="form__input--radio" type="radio" name="newsletter" value="no">
                         <label class="form__label--radio" for="no">No</label>
-                    </div>
-                   
-                  
+                    </div> 
                 </div>
-          
-               
-                
+                <div class="form__row--checkbox">
+                    <p>Where did you find us?</p>
+                    <div class="checkbox__row">
+                        <input class="form__input--checkbox" type="checkbox" name="opt1" >
+                        <label class="form__label--checkbox" for="op1">Friend told me</label>
+                    </div>
+                    <div class="checkbox__row">
+                        <input class="form__input--checkbox"  type="checkbox" name="opt2" >
+                        <label class="form__label--checkbox" for="op2">Found on the Internet</label>
+                    </div>
+                    <div class="checkbox__row">
+                        <input class="form__input--checkbox"  type="checkbox" name="opt3" >
+                        <label class="form__label--checkbox" for="op3">Saw on Social Media</label>
+                    </div>
+                    <div class="checkbox__row">
+                        <input class="form__input--checkbox"  type="checkbox" name="opt4" >
+                        <label class="form__label--checkbox" for="op4">Other:</label>
+                    </div> 
+                    <div class="checkbox__row">
+                        <textarea class="form__textarea" name="" id="" placeholder="How?"></textarea>
+                    </div>                
+                </div>
+                <input class="form__input--submit" type="submit" name="submit" value="Submit">
             </form>
-            <div class="footer__text">
+            <div class="footer__text pd-left">
                 <h2>Lorem ipsum dolor sit.</h2>
             </div>
         </div>
