@@ -1,14 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 :root {
     --main-color: rgba(218, 37, 80, 1);
     --main-color-opaque: rgba(218, 37, 80, 0.7);
     --dark-color: #341F47;
     --ligh-color: #9696D5;
     --bg-color: #fff;
+    --pm: 25px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 /* header */
 header {
@@ -46,16 +51,24 @@ header {
     width: 75%;  
 }
 .pd-right {
-    padding-right: 25px;
+    padding-right: var(--pm);
 }
 .pd-left {
-    padding-left: 25px;
+    padding-left: var(--pm);
+}
+.mg-right{
+    margin-right: var(--pm);
+}
+.mg-left {
+    margin-left: var(--pm);
 }
 .hero-banner {
     background: url(https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
-    padding: 10rem;
+    padding: 10rem 0;
+    background-attachment: fixed;
 }
 .hero__card {
+    align-self: flex-start;
     background: var(--main-color-opaque);
     padding: 1.5rem;
     max-width: 350px;
@@ -82,15 +95,20 @@ section {
     justify-content: center;
 }
 .about-us {
-    padding: 50px 0;
+    padding: 50px 0 100px 0;
 }
 
 .section__text {
     flex: 1;
+    padding: 50px 0;
+}
+.section__text h2 {
+    margin-bottom: 1.5rem;
 }
 .section__img {
     flex: 1;
     background: url(https://images.unsplash.com/photo-1503863937795-62954a3c0f05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
+    border-radius: 5px;
 }
 /* footer */
 footer {
@@ -98,21 +116,31 @@ footer {
     color: var(--bg-color);
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 .footer__contact-form {
     flex: 1;
 }
 .footer__contact-form h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 .footer__text {
     flex: 1;
 }
+.footer__text h2 {
+    margin-bottom: 1.5rem;
+}
+.footer__text p {
+    line-height: 1.3rem;
+}
 .form__row--text {
     display: flex;
+    flex-direction: column;
+}
+.text__row {
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    margin-top: 0.7rem;
     padding-right: 10px;
 }
 .form__row--radio{
@@ -154,4 +182,14 @@ footer {
     width: 100%;
     font-size: 1.3rem;
     padding: 0.5rem;
+}
+.form__input--submit {
+    background: var(--main-color-opaque);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+.form__input--submit:hover {
+   background: var(--main-color);
 }

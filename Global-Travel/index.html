@@ -18,8 +18,8 @@
         <nav>
             <ul class="nav-menu">
                 <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#aboutUs">About us</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,36 +29,38 @@
                 <div class="hero__card">
                     <h1>Welcome to our Homepage!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quae dolore dignissimos omnis consectetur...</p>
-                    <a class="hero__btn" href="#">Read more!</a>
+                    <a class="hero__btn" href="#aboutUs">Read more!</a>
                 </div>
             </div>
             
         </section>
         <section>
-            <div class="container about-us">
-                <div class="section__text pd-right">
+            <div class="container about-us" id="aboutUs">
+                <div class="section__text mg-right">
                     <h2>About us</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis quia ipsa? Repudiandae aliquid quis cum numquam deserunt temporibus ad facilis rem. Dolores, repellat? Totam voluptatum obcaecati explicabo fugit itaque? Odit voluptates repellat molestias iusto esse dignissimos dolor suscipit quas facilis fugit corporis at sed, quae omnis hic cum vitae!</p>
                 </div>
-                <div class="section__img pd-left"></div>
+                <div class="section__img mg-left"></div>
             </div>       
         </section>
     </main>
-    <footer>
+    <footer id="contact">
         <div class="container">
             <form class="footer__contact-form pd-right">
                 <h2>Contact us</h2>
                 <div class="form__row--text">
-                    <label class="form__label--text" for="firstName">First name</label>
-                    <input class="form__input--text" type="text" name="firstName" id="firstName">
-                </div>
-                <div class="form__row--text">
-                    <label class="form__label--text" for="lastName">Last name</label>
-                    <input class="form__input--text" type="text" name="lastName" id="lastName">
-                </div>
-                <div class="form__row--text">
-                    <label class="form__label--text" for="email">Email</label>
-                    <input class="form__input--text" type="email" name="email" id="email">
+                    <div class="text__row">
+                        <label class="form__label--text" for="firstName">First name</label>
+                        <input class="form__input--text" type="text" name="firstName" id="firstName">
+                    </div>
+                    <div class="text__row">
+                        <label class="form__label--text" for="lastName">Last name</label>
+                        <input class="form__input--text" type="text" name="lastName" id="lastName">
+                    </div>
+                    <div class="text__row">
+                        <label class="form__label--text" for="email">Email</label>
+                        <input class="form__input--text" type="email" name="email" id="email">
+                    </div>                  
                 </div>
                 <div class="form__row--radio">
                     <p>Do you want to join with our newsletter?</p>
@@ -97,6 +99,7 @@
             </form>
             <div class="footer__text pd-left">
                 <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquam officia distinctio quis consectetur nam nulla officiis, voluptatibus consequuntur culpa nostrum provident quam nesciunt est hic maiores iusto harum, neque iure veniam atque dignissimos. Debitis?</p>
             </div>
         </div>
     </footer>
