@@ -95,7 +95,6 @@ section {
 }
 .section__img {
     flex: 1;
-    background: url(https://images.unsplash.com/photo-1503863937795-62954a3c0f05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center/cover;
     border-radius: 5px;
     margin-left: var(--pm);
 }
@@ -177,4 +176,20 @@ footer {
 }
 .footer__text p {
     line-height: 1.3rem;
+}
+@media only screen and (max-width: 1000px) {
+    .container, .text__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section__img {
+        margin: 0;
+    }
+    .section__text {
+        margin: 0;
+    }
+    .footer__text {
+       margin-top: 50px;
+       text-align: center;
+    }
 }
