@@ -16,67 +16,45 @@
 
 body {
   font-family: 'Finlandica';
-  background: lightgrey;
 }
 /* --------header--------- */
 .logo-bar {
   background: var(--secondary-color);
-  height: 110px;
   position: relative;
+  padding: 20px 50px;
 }
-.logo a, .header-link a{
+.logo__link, .header__link{
     text-decoration: none;
     display: inline-block;
     color: var(--main-color);
 }
-.logo a {
-  height: 100%;
+.logo__link {
   font-size: 34px;
   letter-spacing: -2px;
-  width: 130px;
   line-height: 1.05;
-  padding-top: 21px;
-  position: absolute;
-  left: 50px;
-  font-style: normal;
 }
 strong {
   font-weight: 700;
   letter-spacing: -2px;
 }
-.header-link {
-  position: absolute;
-  top: 20px;
-  right: 50px;
+.header__link {
+  float: right;
   font-size: 14px;
 }
-.header-link a:hover {
+.header__link:hover {
   text-decoration: underline;
 }
-
-.search {
-  display: block;
-  font-size: 12px;
-  color: var(--secondary-color);
-  /* line-height: 50px; */
-  /* position: absolute;
-  top: 0;
-  right: 50px;
-  z-index: 999; */
-}
-.nav-bar {
+nav {
   background: var(--main-color);
   color: var(--secondary-color);
   font-weight: 400;
   font-style: normal;
-  padding-left: 40px;
+  padding: 0 50px;
   position: relative;
-}
-nav {
-  display: block;
 }
 .nav-menu {
   list-style-type: none;
+  display: inline-block;
 }
 .nav-menu__item {
   position: relative;
@@ -100,6 +78,15 @@ nav {
   vertical padding (50-16)/2/16 -> target height 50px -> minus fontsize, divided by 2 for top and bottom, divided by 16 for em value*/
   padding: 1.0625em 0.8125em;
 }
+.search {
+  display: block;
+  color: var(--secondary-color);
+  text-decoration: none;
+  float: right;
+  padding: 1.0625em 0.8125em;
+  line-height: 1em;
+  margin-right: -0.8125em;
+}
 /* -----------dropdown menu ---------*/
 .dropdown-menu {
   background: var(--secondary-color);
@@ -115,9 +102,11 @@ nav {
   /* when hover ends, these properties are in effect: */
   transition: visibility 0s 1s linear, opacity 1s 0s ease-in-out;
 }
+.dropdown-menu__item {
+  padding: 8px 0 8px 15px;
+}
 .dropdown-menu__link {
   display: block;
-  padding: 0;
   color: var(--main-color);
   text-decoration: none;
 }
@@ -136,10 +125,8 @@ nav {
 /* --------main----------- */
 /* hero banner */
 .hero-banner {
-  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80) no-repeat center center/cover;
   background-position: 50% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
 }
 .hero-banner::before {
