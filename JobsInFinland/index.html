@@ -9,11 +9,10 @@
     <script src="https://kit.fontawesome.com/242a4dda2d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
-    <header>
-        <div class="logo-bar">
+</head>
+<body id="body">
+    <header class="logo-bar">
             <a class="logo__link" href="https://jobs.workinfinland.fi/">
                 JOBS IN<br>
                 <strong>FINLAND</strong>
@@ -21,31 +20,32 @@
             <a class="header__link"
                 href="https://www.businessfinland.fi/en/do-business-with-finland/work-in-finland/in-brief/">» Work in
                 Finland</a>
-        </div>
-        <nav>
-            <ul class="nav-menu">
-                <li class="nav-menu__item nav-menu__item--active"><a class="nav-menu__link" href="#">jobs home</a> </li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#">regions</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Lapland</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Coast</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Lakeland</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Helsinki</a></li>
-                        <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Tampere</a></li>
-                    </ul>
-                </li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#">open positions</a></li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#">about</a></li>
-                <li class="nav-menu__item"><a class="nav-menu__link" href="#">for employers</a></li>
-            </ul>
-            <a class="search" href="#">
-                <i class="fas fa-search"></i>
-            </a>
-        </nav>
     </header>
-    <section class="section-a">
-        <div class="hero-banner">
-            <div class="hero-header">
+    <!-- sticky nav needs to be under body to work -->
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-menu__item nav-menu__item--active"><a class="nav-menu__link" href="#">jobs home</a> </li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#">regions</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Lapland</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Coast</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Lakeland</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Helsinki</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Tampere</a></li>
+                </ul>
+            </li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#">open positions</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#">about</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#">for employers</a></li>
+        </ul>
+        <a class="search" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </nav>
+    <main>
+        <section class="section-hero section">
+            <div class="hero-image"></div>
+            <div class="hero-text">
                 <h1>
                     <b>Jobs</b>
                     in Finland
@@ -54,79 +54,82 @@
                     speaking professionals.</h3>
                 <h3>You can search by region, job category or use the keyword search.</h3>
             </div>
-        </div>
-    </section>
-    <section class="section-b">
-        <div class="grid-container">
-            <div class="grid-header">
-                <h2>explore by category</h2>
-                <p>Browse open positions in your field of expertise. If you don’t find a suitable category, you can try
-                    a category close to your expertise or use the keyword search.</p>
+        </section>
+        <section class="section-b">
+            <div class="grid-container">
+                <div class="grid-header">
+                    <h2>explore by category</h2>
+                    <p>Browse open positions in your field of expertise. If you don’t find a suitable category, you can
+                        try
+                        a category close to your expertise or use the keyword search.</p>
+                </div>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">administration</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">academic</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">engineering</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">finance</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">service</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">health</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">hospitality</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">hr</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">ict</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">manufacturing</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">marketing & sales</spand>
+                </a>
+                <a href="#" class="grid-item">
+                    <spand class="grid-text">project management</spand>
+                </a>
             </div>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">administration</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">academic</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">engineering</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">finance</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">service</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">health</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">hospitality</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">hr</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">ict</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">manufacturing</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">marketing & sales</spand>
-            </a>
-            <a href="#" class="grid-item">
-                <spand class="grid-text">project management</spand>
-            </a>
-        </div>
-    </section>
-    <section class="section-c">
-        <div class="grid-container">
-            <div class="grid-header">
-                <h2>explore by region</h2>
-                <p>Browse open positions by geographic location and click the cities links to find out more about what
-                    the city can offer.
-                    <br>
-                    <br>
-                    Not familiar with the Finnish geography? Don’t worry, you can also browse the jobs on the Finland
-                    map.</p>
-                <a class="map-btn" href="#">See regions on map</a>
+        </section>
+        <section class="section-c">
+            <div class="grid-container">
+                <div class="grid-header">
+                    <h2>explore by region</h2>
+                    <p>Browse open positions by geographic location and click the cities links to find out more about
+                        what
+                        the city can offer.
+                        <br>
+                        <br>
+                        Not familiar with the Finnish geography? Don’t worry, you can also browse the jobs on the
+                        Finland
+                        map.</p>
+                    <a class="map-btn" href="#">See regions on map</a>
 
+                </div>
+                <a href="#" class="grid-item"><span class="grid-text">turku & southwest finland</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">lapland</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">lakeland</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">south ostrobothnia</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">helsinki region</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">espoo</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">tampere</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">oulu</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">talent coastline</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">kuopio</span></a>
+                <a href="#" class="grid-item"><span class="grid-text">jyväskylä</span></a>
             </div>
-            <a href="#" class="grid-item"><span class="grid-text">turku & southwest finland</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">lapland</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">lakeland</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">south ostrobothnia</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">helsinki region</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">espoo</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">tampere</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">oulu</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">talent coastline</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">kuopio</span></a>
-            <a href="#" class="grid-item"><span class="grid-text">jyväskylä</span></a>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="grid-container-footer">
             <div class="footer-item-1">
@@ -174,6 +177,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

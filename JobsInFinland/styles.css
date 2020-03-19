@@ -21,10 +21,13 @@ body {
   font-family: 'Finlandica';
 }
 /* --------header--------- */
+
 .logo-bar {
   background: var(--secondary-color);
-  position: relative;
   padding: 1.25rem 3.125rem;
+  /* prevents hero-banner from sliding over header */
+  z-index: 500;
+  position: relative;
 }
 .logo__link, .header__link{
     text-decoration: none;
@@ -53,7 +56,9 @@ nav {
   font-weight: 400;
   font-style: normal;
   padding: 0 3.125rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 9043;
 }
 .nav-menu {
   list-style-type: none;
@@ -127,25 +132,35 @@ nav {
 }
 /* --------main----------- */
 /* hero banner */
-.hero-banner {
-  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80) no-repeat center center/cover;
-  background-position: 50% 30%;
+.section-hero {
   position: relative;
+  z-index: 10;
 }
-.hero-banner::before {
+.hero-image {
+  position: fixed;
+  background: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  /* moves backgroung image so no white space is visible between hero-image and nav  */
+  margin-top: -20vh;
+}
+.hero-image::before {
   content: '';
+  display: block;
   background: var(--main-color);
   opacity: 0.4;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
 }
-.hero-banner > * {
-  position: relative;
-}
-.hero-header {
+
+.hero-text {
   color: #fff;
   width: 50%;
   text-transform: uppercase;
@@ -153,24 +168,28 @@ nav {
   text-align: center;
   margin: 0 auto;
   padding: 8.125rem 0;
+  position: relative;
 }
-.hero-header h1 {
+.hero-text h1 {
   font-size: 6.3rem;
   font-weight: 400;
   padding-bottom: .625rem;
 }
-.hero-header h3 {
+.hero-text h3 {
   font-size: 1.9rem;
   font-weight: 400;
   margin: 0 0 .5rem;
 }
-.hero-header h1::after {
+.hero-text h1::after {
   color: #fff;
   opacity: 1;
 }
 /* -------------grid styles------------ */
-section {
+.section-b, .section-c {
   background: var(--secondary-color);
+  /* prevent section from sliding under hero banner: */
+  z-index: 80;
+  position: relative;
 }
 .grid-container {
   display: grid;
@@ -333,6 +352,9 @@ section {
 footer {
   color: white;
   width: 100%;
+  /* prevents hero-image sliding on top of footer */
+  z-index: 500;
+  position: relative;
 }
 .grid-container-footer {
   display: grid;
