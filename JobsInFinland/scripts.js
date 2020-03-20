@@ -21,3 +21,19 @@ const scrollLoop = () => {
 //starts the loop after DOM has loaded
 //false prevents event bubbling
 window.addEventListener('DOMContentLoaded', scrollLoop, false);
+
+const trackScroll = () => {
+    const button = document.querySelector('.back-to-top-btn');
+    //viewport height
+    let vpHeight = document.documentElement.clientHeight;
+    scrollPosition.y = window.scrollY;
+
+    if (scrollPosition.y > vpHeight) {
+        button.style.display = 'block';
+    }
+    if (scrollPosition.y < vpHeight) {
+        button.style.display = 'none';
+    }
+}
+
+window.addEventListener('scroll', trackScroll);

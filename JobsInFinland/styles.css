@@ -8,15 +8,17 @@
   --secondary-color: #fff;
   --layer: linear-gradient(
     rgba(0, 46, 162, 0.3), 
-    rgba(0, 46, 162, 0.3))
-}
-
+    rgba(0, 46, 162, 0.3));
+  --btn-bg: rgba(255, 255, 255, .45);
+  }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Finlandica';
 }
@@ -390,4 +392,25 @@ footer strong {
 }
 footer p {
   line-height: 2em;
+}
+.back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  right: 4rem;
+  z-index: 9999;
+  border-radius: 2px;
+  background: var(--btn-bg);
+  color: var(--main-color);
+  text-decoration: none;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  transition: background .2s ease-in, color .2s ease-in;
+}
+
+.back-to-top-btn:hover {
+  color: var(--secondary-color);
+  background: var(--main-color);
 }
